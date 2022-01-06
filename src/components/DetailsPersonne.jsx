@@ -13,7 +13,6 @@ import { getDetailsPeople } from '../api/TheMovieDB';
 
 const PersonneItem = ({ route, favPersonnes, dispatch }) => {
 
-    console.log(favPersonnes);
     const [indicator, setIndicator] = useState(true);
     const [personne, setPersonne] = useState();
     const [isError, setIsError] = useState(false);
@@ -81,6 +80,9 @@ const PersonneItem = ({ route, favPersonnes, dispatch }) => {
                     <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                         <View style={{ justifyContent: 'center', margin: 10 }}>
                             <Text style={styles.nomRestaurant}>{personne.name}</Text>
+                            <Text style={styles.nomRestaurant}>Birthday</Text>
+                            <Text style={styles.etablissement}>{personne.birthday}</Text>
+                            <Text style={styles.nomRestaurant}>Bio</Text>
                             <Text style={styles.etablissement}>{personne.biography}</Text>
                         </View>
                     </View>
